@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to left, #3bbfb2, #439c98);
+    font-family: 'Titillium Web', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: #faf9f3;
+    margin: 20px auto;
+    width: 400px;
+}
+
+.header {
+    font-family: 'Playfair Display', serif;
+    padding: 10px;
+    position: relative;
+    height: 150px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.932);
+}
+
+
+.day {
+    position: absolute;
+    right: 15px;
+    bottom: 45px;
+    color: rgb(243, 133, 153);
+    font-size: 1.2em;
+}
+
+.month {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    color: rgb(59, 191, 178);
+    font-size: 1.7em;
+}
+
+/* style list */
+
+
+
+ul.list {
+    list-style: none;
+    min-height: 20vh;
+    
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 8px 10px 60px;
+    font-size: 18px;
+    transition: 0.2s;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.932);
+    min-height: 1em;
+  }
+
+ul li:hover {
+    background-color: rgba(238, 238, 238, 0.932);
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid black;
+    top: 16px;
+    left: 20px;
+}
+
+/* styles when LI is clicked */
+
+ul li.checked {
+    text-decoration: line-through;
+    color: rgb(99, 97, 97);
+}
+
+ul li.checked::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(243, 133, 153);
+    border: 2px solid rgb(243, 133, 153);
+    top: 16px;
+    left: 20px;
+}
+
+/* add close button to the right of item */
+
+.close {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .close:hover {
+    color: inherit;
+    text-shadow: 0px 0px 5px rgba(83, 83, 83, 0.623);
+  }
+
+/* style add-to-do button*/
+
+.add-to-do {
+    position: relative;
+    padding: 15px 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 60px;
+}
+
+.add-to-do i {
+    position: absolute;
+    font-size: 1.9em;
+    top: 15px;
+    color: rgb(59, 191, 178);
+}
+
+.add-to-do i:hover {
+    color: rgb(44, 141, 131);
+    cursor: pointer;
+}
+
+.add-to-do input {
+    position: absolute;
+    padding: 0 10px 0 10px;
+    width: 85%;
+    top: 15px;
+    left: 40px;
+    height: 30px;
+    border: none;
+    background-color: inherit;
+}
